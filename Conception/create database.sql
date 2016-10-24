@@ -1,3 +1,5 @@
+
+
 DROP TABLE objectDeclared_ojd;
 DROP TABLE objectfound_ojf;
 DROP TABLE objet_obj;
