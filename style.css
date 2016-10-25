@@ -1,0 +1,40 @@
+body > header {
+	display: inline-block;
+	color: white;
+	max-width: 200px;
+	max-height: 200px;
+	text-align: center;
+	padding: 2px 2px 2px 100px;
+	margin: 5px;
+}
+
+
+div {
+    display: inline-block;
+    width: 70%;
+    padding: 20px 20px 20px 280px;
+    margin: 5px;
+	text-align: center;
+	image-orientation: center;
+}
+
+img {
+     max-width: 100%;
+     vertical-align: middle;
+}
+
+.main .tab-con th {
+    width: 300px;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    line-height: 2.5;
+    text-align: center;
+    font-family: Calibri, Helvetica, sans-serif;
+    }
+    
+footer {
+	text-align: end;
+	padding: 100px;
+	margin: 10px;
+}
