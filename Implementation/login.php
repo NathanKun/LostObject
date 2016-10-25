@@ -13,7 +13,7 @@
         $hint=$message;
     } else{
         // check database.
-        $conn = new mysqli('localhost', 'root', '', 'ObjetsPerdus');
+        $conn = new mysqli('localhost', 'root', '', 'LostObjects');
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
             echo "Connection failed: $conn";

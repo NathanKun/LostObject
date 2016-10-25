@@ -17,7 +17,14 @@ footer {
     display: none;
 }
 
-.abandonner {
+.abandon {
+    text-align: center;
+    width: 80px;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.found {
     text-align: center;
     width: 80px;
     max-width: 100px;
@@ -26,5 +33,5 @@ footer {
 
 .date {
     text-align: center;
-    max-width: 15em;
+    width: 8em;
 }

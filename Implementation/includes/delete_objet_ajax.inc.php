@@ -1,11 +1,6 @@
 <?php
 if (isset($_POST['obj_id'])) {
-    $conn = new mysqli('localhost', 'root', '', 'ObjetsPerdus');
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-        echo "Connection failed: $conn";
-    } 
+	include "connect_database.inc.php";
 
     $sql = "DELETE FROM object_obj WHERE obj_id=".$_POST['obj_id'];
     

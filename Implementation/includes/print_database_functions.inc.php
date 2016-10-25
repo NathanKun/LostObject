@@ -1,11 +1,6 @@
 <?php
 
-$conn = new mysqli('localhost', 'root', '', 'ObjetsPerdus');
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    echo "Connection failed: $conn";
-} 
+include "connect_database.inc.php";
 
 function print_user_usr(){
     global $conn;
