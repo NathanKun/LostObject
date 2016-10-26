@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <?php include('/includes/header.inc.php');?>
-    <?php include('login.php');?>
+    <?php include('./includes/header.inc.php');?>
+    <?php include('./includes/login.inc.php');?>
     <section>
         <form name="login_input" method="post" action="<?php echo htmlspecialchars($_SERVER[ 'PHP_SELF' ]);?>">
             <h4 id="hint">
@@ -27,14 +27,10 @@
                 <input type="submit" value="Se connecter" />
             </div>
             <div class="link">
-                <a href="register">Créer un compte</a>
+                <a href="register.php">Créer un compte</a>
             </div>
         </form>
     </section>
-    <script>
-
-
-    </script>
     <?php include('/includes/footer.inc.php') ?>
 
 </body>

@@ -1,6 +1,8 @@
-DROP DATABASE IF EXISTS LostObjects;
-CREATE DATABASE IF NOT EXISTS LostObjects;
-USE LostObjects;
+--DROP DATABASE IF EXISTS LostObjects;
+--CREATE DATABASE IF NOT EXISTS LostObjects;
+--USE LostObjects;
+
+USE bddgr1003;
 
 DROP TABLE IF EXISTS
   objectDeclared_ojd;
@@ -13,7 +15,7 @@ DROP TABLE IF EXISTS
   
 CREATE TABLE IF NOT EXISTS user_usr(
   usr_id VARCHAR(50),
-  usr_pw VARCHAR(50) NOT NULL,
+  usr_pw VARCHAR(255) NOT NULL,
   usr_name VARCHAR(50) NOT NULL,
   usr_level INT(1) NOT NULL,
   PRIMARY KEY(usr_id)
@@ -49,9 +51,9 @@ CREATE TABLE IF NOT EXISTS objectFound_ojf(
 
 
 INSERT INTO `user_usr` (`usr_id`, `usr_pw`, `usr_name`, `usr_level`) VALUES
-('dev', 'a', 'a', 3),
-('admin', 'bb', 'bb', 2),
-('student', 'ccc', 'ccc', 1),
+('dev', '$2y$10$jwEw6wuhr2okIkQSMgB0G.x5HLV0vvF9vqOLu5XY1tmK5.ihCTK6G', 'a', 3),
+('admin', '$2y$10$KXGMt7tHyAVwwMBZKbIlquN.9lhpQ1COB4EVGjNqqrVoKfIlAq46y', 'bb', 2),
+('student', '$2y$10$YVoZAa0AWbnk.sj6Jem.I.kIqSVk0OKOLWG11r/B1jqoa.SzYz0aC', 'ccc', 1),
 ('level', 'a', 'incorrect', 4),
 ('db', 'db', 'db', 99);
 
