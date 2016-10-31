@@ -13,7 +13,7 @@ $user=NULL;
 $adr=NULL;
 $pw=NULL;
 
-include "./includes/print_database_functions.inc.php";
+require_once "./includes/print_database_functions.inc.php";
 
 print_user_usr();
 print_objet_obj();

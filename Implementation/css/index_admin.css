@@ -18,6 +18,16 @@ footer {
 }
 
 .abandon {
+	/*
+    text-align: center;
+    width: 80px;
+    max-width: 100px;
+    margin: 0 auto;
+	*/
+	display: none;
+}
+
+.returned {
     text-align: center;
     width: 80px;
     max-width: 100px;

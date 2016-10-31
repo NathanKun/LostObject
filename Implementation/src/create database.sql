@@ -1,8 +1,8 @@
---DROP DATABASE IF EXISTS LostObjects;
---CREATE DATABASE IF NOT EXISTS LostObjects;
---USE LostObjects;
+DROP DATABASE IF EXISTS LostObjects;
+CREATE DATABASE IF NOT EXISTS LostObjects;
+USE LostObjects;
 
-USE bddgr1003;
+#USE bddgr1003;
 
 DROP TABLE IF EXISTS
   objectDeclared_ojd;
@@ -26,6 +26,10 @@ CREATE TABLE IF NOT EXISTS object_obj(
   obj_name VARCHAR(50) NOT NULL,
   obj_description VARCHAR(500),
   obj_photofilename VARCHAR(50),
+  /*1 for normal
+	2 for a found object returned or a lost object found
+	3 for abandonned */
+  obj_stat INT NOT NULL,
   PRIMARY KEY(obj_id)
 );
 
@@ -57,19 +61,19 @@ INSERT INTO `user_usr` (`usr_id`, `usr_pw`, `usr_name`, `usr_level`) VALUES
 ('level', 'a', 'incorrect', 4),
 ('db', 'db', 'db', 99);
 
-INSERT INTO `object_obj` (`obj_name`, `obj_description`, `obj_photofilename`) VALUES
-('obj1', 'this is the first object of the world', '1.jpeg'),
-('obj2', 'this is the second object of the world', '2.jpeg'),
-('obj3', 'this is the third object of the world', '3.jpeg'),
-('obj4', 'this is the fouth object of the world', '4.jpeg'),
-('obj5', 'this is the fifth object of the world', '5.jpeg'),
-('obj6', 'this is the sixth object of the world', '6.jpeg'),
-('obj7', 'this is the seventh object of the world', '7.jpeg'),
-('obj8', 'this is the eighth object of the world', '8.jpeg'),
-('obj9', 'this is the ninth object of the world', '9.jpeg'),
-('obj10', 'object 10', '10.jpeg'),
-('obj11', 'object 11', '11.jpeg'),
-('obj12', 'object 12', '12.jpeg');
+INSERT INTO `object_obj` (`obj_name`, `obj_description`, `obj_photofilename`, `obj_stat`) VALUES
+('obj1', 'this is the first object of the world', '1.jpeg', 1),
+('obj2', 'this is the second object of the world', '2.jpeg', 1),
+('obj3', 'this is the third object of the world', '3.jpeg', 1),
+('obj4', 'this is the fouth object of the world', '4.jpeg', 1),
+('obj5', 'this is the fifth object of the world', '5.jpeg', 1),
+('obj6', 'this is the sixth object of the world', '6.jpeg', 1),
+('obj7', 'this is the seventh object of the world', '7.jpeg', 1),
+('obj8', 'this is the eighth object of the world', '8.jpeg', 1),
+('obj9', 'this is the ninth object of the world', '9.jpeg', 1),
+('obj10', 'object 10', '10.jpeg', 1),
+('obj11', 'object 11', '11.jpeg', 1),
+('obj12', 'object 12', '12.jpeg', 1);
 
 INSERT INTO `objectfound_ojf` (`ojf_obj_id`, `ojf_adddate`, `ojf_adder`) VALUES
 (1, now(), 'dev'),

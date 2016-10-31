@@ -1,6 +1,6 @@
 <?php
 
-include "connect_database.inc.php";
+require_once "connect_database.inc.php";
 
 function print_user_usr(){
     global $conn;
@@ -40,13 +40,15 @@ function print_objet_obj(){
         <tr><th>obj_id</th>
         <th>obj_name</th>
         <th>obj_description</th>
-        <th>obj_photofilename</th>";
+        <th>obj_photofilename</th>
+        <th>obj_stat</th>";
     // output data of each row
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["obj_id"]. 
                 "</td><td>" . $row["obj_name"]. 
                 "</td><td>" . $row["obj_description"]. 
                 "</td><td>" . $row["obj_photofilename"]. 
+                "</td><td>" . $row["obj_stat"]. 
                 "</td></tr>";
     }
         echo "</table>";
@@ -70,7 +72,8 @@ function print_objectDeclared_ojd(){
         <th>obj_id</th>
         <th>obj_name</th>
         <th>obj_description</th>
-        <th>obj_photofilename</th>";
+        <th>obj_photofilename</th>
+        <th>obj_stat</th>";
         // output data of each row
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["ojd_id"]. 
@@ -81,6 +84,7 @@ function print_objectDeclared_ojd(){
                 "</td><td>" . $row["obj_name"]. 
                 "</td><td>" . $row["obj_description"]. 
                 "</td><td>" . $row["obj_photofilename"]. 
+                "</td><td>" . $row["obj_stat"]. 
                 "</td></tr>";
         }
         echo "</table>";
@@ -104,7 +108,8 @@ function print_objectFound_ojf(){
         <th>obj_id</th>
         <th>obj_name</th>
         <th>obj_description</th>
-        <th>obj_photofilename</th>";
+        <th>obj_photofilename</th>
+        <th>obj_stat</th>";
         // output data of each row
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["ojf_id"].
@@ -115,6 +120,7 @@ function print_objectFound_ojf(){
                 "</td><td>" . $row["obj_name"]. 
                 "</td><td>" . $row["obj_description"]. 
                 "</td><td>" . $row["obj_photofilename"]. 
+                "</td><td>" . $row["obj_stat"]. 
                 "</td></tr>";
         }
         echo "</table>";
