@@ -1,6 +1,6 @@
 <?php
 
-require_once("/includes/param.inc.php");
+require_once("param.inc.php");
 global $host;
 global $user;
 global $dbpw;

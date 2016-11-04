@@ -43,7 +43,7 @@
 						$pw = password_hash($conn->real_escape_string($pw), PASSWORD_DEFAULT);
 						$name = $conn->real_escape_string($name);
 						
-						$sql = "INSERT INTO user_usr (usr_id, usr_name, usr_pw, usr_level) VALUES ($id, $name, $pw, 1)";
+						$sql = "INSERT INTO user_usr (usr_id, usr_name, usr_pw, usr_level) VALUES ('$id', '$name', '$pw', 1)";
 						$result = $conn->query($sql);
 						$hint = "Created!";
 						

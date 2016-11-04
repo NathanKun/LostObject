@@ -1,5 +1,5 @@
 <?php
-	require_once "connect_database.inc.php";
+	require "connect_database.inc.php";
     global $conn;
 
     echo "<h3>La liste des objets trouvés</h3>";
@@ -21,16 +21,18 @@
 
         // output data of each object wasn't marked as abandonned, found or returned.
         while($row = $result->fetch_assoc()) {
-			if ($row[obj_stat == 1]){
-				echo "<tr><td>" . $row["obj_name"]. 
-                "</td><td>
-                <a href=\"../src/photo/" . $row["obj_photofilename"] . "\">
+			if ($row['obj_stat'] == 1){
+				echo "<tr>
+                <td>" . $row["obj_name"]. 
+                "</td>
+                <td><a href=\"../src/photo/" . $row["obj_photofilename"] . "\">
                 <img class=\"photo\" src=\"../src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
-                "</a></td><td>" . $row["obj_description"].  
-                "</td><td class=\"date\">" . $row["ojf_adddate"]. 
-                "</td><td class=\"returned\">
-                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td>
-				</td><td class=\"abandon\">
+                "</a></td>
+                <td>" . $row["obj_description"].  "</td>
+                <td class=\"date\">" . $row["ojf_adddate"]. "</td>
+                <td class=\"returned\">
+                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td></td>
+                <td class=\"abandon\">
                 <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/delete.png\" alt=\"delete\"></td>
                 <td class=\"id\">" . $row["obj_id"] . "</td></tr>";
 			}
@@ -40,4 +42,3 @@
         echo "0 results<br>";
     }
 ?>
-

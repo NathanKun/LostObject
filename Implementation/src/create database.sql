@@ -58,8 +58,8 @@ INSERT INTO `user_usr` (`usr_id`, `usr_pw`, `usr_name`, `usr_level`) VALUES
 ('dev', '$2y$10$jwEw6wuhr2okIkQSMgB0G.x5HLV0vvF9vqOLu5XY1tmK5.ihCTK6G', 'a', 3),
 ('admin', '$2y$10$KXGMt7tHyAVwwMBZKbIlquN.9lhpQ1COB4EVGjNqqrVoKfIlAq46y', 'bb', 2),
 ('student', '$2y$10$YVoZAa0AWbnk.sj6Jem.I.kIqSVk0OKOLWG11r/B1jqoa.SzYz0aC', 'ccc', 1),
-('level', 'a', 'incorrect', 4),
-('db', 'db', 'db', 99);
+('level', '$2y$10$fPnTT6ui9z3ydn4FUMRPwum4c8HYktRhS..a36jVViKSZEeQdEqNS', 'incorrect', 4),
+('db', '$2y$10$MIGMsKFJ2ztYmJVVtpLIl.mGSn.Pd6CJsWCDr5A0mlzy/4DUCPGYq', 'db', 99);
 
 INSERT INTO `object_obj` (`obj_name`, `obj_description`, `obj_photofilename`, `obj_stat`) VALUES
 ('obj1', 'this is the first object of the world', '1.jpeg', 1),
