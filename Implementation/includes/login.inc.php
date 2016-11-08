@@ -34,6 +34,12 @@
                 if(password_verify($pw, $row["usr_pw"])){
                     // login successful
                     $hint="Bienvenu " . $row["usr_name"] . ".";
+                    $lifeTime = 10;
+                    session_set_cookie_params($lifeTime);
+                    session_start();
+                    $_SESSION["loggedIn"] = true;
+                    $_SESSION["usr_id"] = $row["usr_id"];
+                    $_SESSION["usr_name"] = $row["usr_name"];
                     switch($row["usr_level"]){
                         case 1:
 							header('refresh:1; url=index_student.php');
@@ -49,10 +55,12 @@
 							
                         case 99:
                             header("refresh:1;url=print_database.php");
+                            session_destroy();
                             break;
                            
                         default:
                             $hint="User level incorrect, it can not be " . $row["usr_level"] . " .";
+                            session_destroy();
 							break;
 					} 
                 } else{

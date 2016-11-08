@@ -11,17 +11,22 @@
 </head>
 
 <body>
-    <?php include "./includes/header.inc.php"?>
+    <?php include "./includes/header.inc.php";
+          include "./includes/verifySession.inc.php"; ?>
 
-
-    <h1 id="result"></h1>
     <div>
-        <img id="addImg" src="/src/addObjFound" alt="Ajouter un objet trouvé" />
+        <img class="btnImg" src="/src/disconnect.png" alt="Déconnecter" />
+        <img class="btnImg" src="/src/addObjFound.png" alt="Ajouter un objet trouvé" />
+    </div>
+    <div>
         <?php include "./includes/found_object_table.inc.php" ?>
     </div>
+
     <div>
         <?php include "./includes/declared_object_table.inc.php" ?>
     </div>
+
+    <p id="result"> </p>
 
     <?php include "./includes/footer.inc.php" ?>
 </body>

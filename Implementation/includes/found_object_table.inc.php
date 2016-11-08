@@ -31,7 +31,7 @@
                 <td>" . $row["obj_description"].  "</td>
                 <td class=\"date\">" . $row["ojf_adddate"]. "</td>
                 <td class=\"returned\">
-                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td></td>
+                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td>
                 <td class=\"abandon\">
                 <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/delete.png\" alt=\"delete\"></td>
                 <td class=\"id\">" . $row["obj_id"] . "</td></tr>";
