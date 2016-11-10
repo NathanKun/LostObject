@@ -40,6 +40,7 @@ function print_objet_obj(){
         <tr><th>obj_id</th>
         <th>obj_name</th>
         <th>obj_description</th>
+        <th>obj_adddate</th>
         <th>obj_photofilename</th>
         <th>obj_stat</th>";
     // output data of each row
@@ -47,6 +48,7 @@ function print_objet_obj(){
             echo "<tr><td>" . $row["obj_id"]. 
                 "</td><td>" . $row["obj_name"]. 
                 "</td><td>" . $row["obj_description"]. 
+                "</td><td>" . $row["obj_adddate"]. 
                 "</td><td>" . $row["obj_photofilename"]. 
                 "</td><td>" . $row["obj_stat"]. 
                 "</td></tr>";
@@ -78,7 +80,7 @@ function print_objectDeclared_ojd(){
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["ojd_id"]. 
                 "</td><td>" . $row["ojd_obj_id"]. 
-                "</td><td>" . $row["ojd_declarationdate"]. 
+                "</td><td>" . $row["obj_adddate"]. 
                 "</td><td>" . $row["ojd_declarer"]. 
                 "</td><td>" . $row["obj_id"]. 
                 "</td><td>" . $row["obj_name"]. 
@@ -114,7 +116,7 @@ function print_objectFound_ojf(){
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["ojf_id"].
                 "</td><td>" . $row["ojf_obj_id"]. 
-                "</td><td>" . $row["ojf_adddate"]. 
+                "</td><td>" . $row["obj_adddate"]. 
                 "</td><td>" . $row["ojf_adder"]. 
                 "</td><td>" . $row["obj_id"]. 
                 "</td><td>" . $row["obj_name"]. 

@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="keywords" content="admin,ajouter, perdu, trouvé, objets">
+    <meta name="description" content="Index pour l'administrateur">
+    <meta name="robots" content="none">
+    <meta http-equiv="cache-control" content="no-cache">
     <title>Objets perdus - Page d'acceuil - Administrateur</title>
     <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/index_admin.css">
@@ -15,8 +19,13 @@
           include "./includes/verifySession.inc.php"; ?>
 
     <div>
-        <img class="btnImg" src="/src/disconnect.png" alt="Déconnecter" />
-        <img class="btnImg" src="/src/addObjFound.png" alt="Ajouter un objet trouvé" />
+        <a href="disconnect.php">
+            <img class="btnImg" src="/src/disconnect.png" alt="Déconnecter" />
+        </a>
+        <a href="addObject.php">
+            <img class="btnImg" src="/src/addObjFound.png" alt="Ajouter un objet trouvé" />
+        </a>
+
     </div>
     <div>
         <?php include "./includes/found_object_table.inc.php" ?>

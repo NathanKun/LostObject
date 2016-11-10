@@ -20,7 +20,8 @@
 			echo "<script type='text/javascript'>alert('$message');</script>";
 			$hint=$message;
 		} else{
-			// check are pw & pw2 the same
+            if(strlen($pw) >= 6){
+            // check are pw & pw2 the same
 			if($pw2 == $pw){
 				// check if id is already existed
 				require_once("param.inc.php");
@@ -40,13 +41,16 @@
 						// id doesn't exist yet, so create it!
 						
 						$id = $conn->real_escape_string($id);
-						$pw = password_hash($conn->real_escape_string($pw), PASSWORD_DEFAULT);
+						$pwHash = password_hash($conn->real_escape_string($pw), PASSWORD_DEFAULT);
 						$name = $conn->real_escape_string($name);
 						
-						$sql = "INSERT INTO user_usr (usr_id, usr_name, usr_pw, usr_level) VALUES ('$id', '$name', '$pw', 1)";
-						$result = $conn->query($sql);
-						$hint = "Created!";
-						
+						$sql = "INSERT INTO user_usr (usr_id, usr_name, usr_pw, usr_level) VALUES ('$id', '$name', '$pwHash', 1)";
+						if ($conn->query($sql) === TRUE) {
+						    $hint = "Compte créé! En cours de rediriger vers la page d'acceuil";
+                            header("refresh:3;url=index.php");
+                        } else {
+                            echo "Error: " . $sql . "<br>" . $conn->error;
+                        }
 					} else{
 						// id already existed
 						$hint="L'identifiant est déja pris.";
@@ -58,6 +62,11 @@
 				//pw != pw2
 				$hint="Les deux mots de passes sont différent.";
 			}
+        } else {
+                // strlen of pw <6
+                $hint="Le longeur de mots de passe doit être supérieur à 6 caractères.";
+            }
+			
 		}
 	}
 ?>

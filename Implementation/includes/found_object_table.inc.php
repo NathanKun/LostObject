@@ -24,12 +24,17 @@
 			if ($row['obj_stat'] == 1){
 				echo "<tr>
                 <td>" . $row["obj_name"]. 
-                "</td>
-                <td><a href=\"../src/photo/" . $row["obj_photofilename"] . "\">
-                <img class=\"photo\" src=\"../src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
-                "</a></td>
-                <td>" . $row["obj_description"].  "</td>
-                <td class=\"date\">" . $row["ojf_adddate"]. "</td>
+                "</td>";
+                // show photo if exist
+                if(!is_null($row["obj_photofilename"])){
+                    echo "<td><a href=\"../src/photo/" . $row["obj_photofilename"] . "\">
+                    <img class=\"photo\" src=\"../src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
+                    "</a></td>";
+                } else {
+                    echo "<td><img class=\"photo\" src=\"../src/photo/nophoto.png\" alt=\"nophoto.png\" ></td>";
+                }
+                echo "<td>" . $row["obj_description"].  "</td>
+                <td class=\"date\">" . $row["obj_adddate"]. "</td>
                 <td class=\"returned\">
                 <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td>
                 <td class=\"abandon\">

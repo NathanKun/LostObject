@@ -10,46 +10,48 @@ h2 {
     margin: 2px;
 }
 
-section {
-    display: block;
-    padding: 3px;
-    margin: 10px;
-    text-align: center;
-    vertical-align: text-top;
-}
-
 #hint {
     color: red;
     display: block;
 }
 
-.input>label {
+label {
     display: block;
     padding: 3px;
     margin: 10px;
+    text-align: left;
 }
 
-.input>input {
+input {
     display: block;
     padding: 3px;
     margin: 10px;
     width: 15em;
-}
-
-.input {
-    display: inline-block;
-    vertical-align: text-top;
+    text-align: left;
 }
 
 .button {
-    display: inline-block;
+    display: block;
     padding: 3px;
     vertical-align: bottom;
     margin-bottom: .5em;
 }
 
-.link {
+#obj_description {
+    height: 15em;
+    width: 600px;
+    display: block;
     padding: 3px;
+    margin: 10px;
+}
+
+section {
+    display: block;
+    padding: 3px;
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    vertical-align: text-top;
 }
 
 footer {
