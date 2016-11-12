@@ -1,0 +1,10 @@
+td:nth-child(2) {
+    display: table-cell;
+    text-align: center;
+    border-right: 1px solid #D9E4E6;
+}
+
+table {
+    width: 50%;
+    margin: 0 auto;
+}

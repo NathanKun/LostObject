@@ -6,9 +6,10 @@
     <meta name="keywords" content="stat, statistic，statistique, ESIGELEC, gestionnaire, developer">
     <meta name="description" content="Statistique">
     <meta name="robots" content="index">
-    <title>Objets perdus - Index</title>
+    <title>Système Objets perdus - Statistique</title>
     <link rel="stylesheet" href="/css/header_footer.css">
     <link rel="stylesheet" href="/css/table.css">
+    <link rel="stylesheet" href="/css/statistic.css">
 </head>
 
 <body>
@@ -122,14 +123,14 @@
         <td>nombre d'objet abandonné</td>
         <td>$nb_object_abandonned</td>
         </tr><tr>
-        <td>Pourcentage d'objet retrouvé</td>
-        <td>" . round ($nb_object_returned / $nb_object_found * 100, 2, PHP_ROUND_HALF_UP) . "%</td>
-        </tr><tr>
-        <td>Pourcentage d'objet retourné</td>
+        <td>Pourcentage d'objet déclaré retrouvé</td>
         <td>" . round ($nb_object_refound / $nb_object_declared * 100, 2, PHP_ROUND_HALF_UP) . "%</td>
         </tr><tr>
-        <td>Pourcentage d'objet abandonné</td>
-        <td>" . round ($nb_object_abandonned / $nb_object * 100, 2, PHP_ROUND_HALF_UP) . "%</td>
+        <td>Pourcentage d'objet trouvé retourné</td>
+        <td>" . round ($nb_object_returned / $nb_object_found * 100, 2, PHP_ROUND_HALF_UP) . "%</td>
+        </tr><tr>
+        <td>Pourcentage d'objet trouvé abandonné</td>
+        <td>" . round ($nb_object_abandonned / $nb_object_found * 100, 2, PHP_ROUND_HALF_UP) . "%</td>
         </tr></table>";
     ?>
 

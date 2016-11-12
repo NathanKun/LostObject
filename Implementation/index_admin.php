@@ -6,7 +6,7 @@
     <meta name="keywords" content="admin,ajouter, perdu, trouvé, objets">
     <meta name="description" content="Index pour administrateur">
     <meta name="robots" content="none">
-    <title>Objets perdus - Page d'acceuil - Administrateur</title>
+    <title>Système Objets perdus - Page d'acceuil - Administrateur</title>
     <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/index_admin.css">
     <link rel="stylesheet" href="./css/header_footer.css">
@@ -17,16 +17,16 @@
 <body>
     <?php include "./includes/header.inc.php";
           include "./includes/verifySession.inc.php"; ?>
+    <?php $_SESSION["title"] = "Ajouter un objet trouvé";
+          $_SESSION["uploadList"] = "ojf"; ?>
 
-    <div>
-        <a class="link" href="disconnect.php">
-            <img class="btnImg" src="/src/disconnect.png" alt="Déconnecter" />
+    <div id="buttons">
+        <a id="addObjLink" href="uploadObject.php">
+            <img src="/src/addObjFound.png" alt="Ajouter un objet trouvé" />
         </a>
-        <br>
-        <a class="link" href="addObject.php">
-            <img class="btnImg" src="/src/addObjFound.png" alt="Ajouter un objet trouvé" />
+        <a id="disconnectLink" href="disconnect.php">
+            <img src="/src/disconnect.png" alt="Déconnecter" />
         </a>
-
     </div>
     <div>
         <?php include "./includes/found_object_table.inc.php" ?>

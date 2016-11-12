@@ -1,9 +1,3 @@
-body>header {
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
-}
-
 section {
     display: block;
     padding: 3px;
@@ -57,20 +51,4 @@ body {
     font-family: Arial, sans-serif;
     color: #024457;
     background: #f2f2f2;
-}
-
-h1 {
-    font-family: Verdana;
-    font-weight: normal;
-    color: #024457;
-}
-
-h1 span {
-    color: #167F92;
-}
-
-h2 {
-    text-align: center;
-    padding: 2px;
-    margin: 2px;
 }

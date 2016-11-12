@@ -12,11 +12,14 @@
 </head>
 
 <body>
-    <?php include "/includes/header.inc.php" ?>
+    <?php include "/includes/header.inc.php";
+          require_once "/includes/verifySession.inc.php";?>
 
-    <h2>Ajouter un objet trouvé</h2>
-    <section>
+    <h2>
         <?php include "/includes/upload.inc.php"?>
+        <?php echo $_SESSION["title"] ?>
+    </h2>
+    <section>
         <form id="inputForm" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER[ 'PHP_SELF' ]);?>">
             <h4 id="hint">
                 <?php echo $hint; ?>

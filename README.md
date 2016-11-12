@@ -15,6 +15,9 @@ ErrorDocument 404 /404.html
 
 TODO:
 objectfound_ojf.ojf_adddate and objectdeclared_ojd.ojd_declarationdate is actually the same thing,
-should delete them and add object_obj.obj_adddate. (FIXED)
+should delete them and add object_obj.obj_adddate. (DONE)
+
+Page for create admin account by dev.
+
 
 Try piwik at school's computer.

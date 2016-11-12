@@ -6,7 +6,7 @@
     <meta name="keywords" content="gestionnaire,statistique, developer, abandonner,stat, objets">
     <meta name="description" content="Index pour gestionnaire">
     <meta name="robots" content="none">
-    <title>Objets perdus - Page d'acceuil - Gestionnaire</title>
+    <title>Système Objets perdus - Page d'acceuil - Gestionnaire</title>
     <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/index_dev.css">
     <link rel="stylesheet" href="./css/header_footer.css">
@@ -18,13 +18,12 @@
     <?php include "./includes/header.inc.php";
           include "./includes/verifySession.inc.php"; ?>
 
-    <div>
-        <a class="link" href="disconnect.php">
-            <img class="btnImg" src="/src/disconnect.png" alt="Déconnecter" />
+    <div id="buttons">
+        <a id="statLink" href="statistic.php">
+            <img src="/src/statistic.png" alt="Statistique" />
         </a>
-        <br>
-        <a class="link" href="statistic.php">
-            <img class="btnImg" src="/src/statistic.png" alt="Statistique" />
+        <a id="disconnectLink" href="disconnect.php">
+            <img src="/src/disconnect.png" alt="Déconnecter" />
         </a>
     </div>
     <div>

@@ -1,14 +1,14 @@
 <?php
-include "/path.php";
-$obj_name = "";
-$obj_description = "";
-$hint = "";
-// phpinfo();
+    include "/path.php";
+    $obj_name = "";
+    $obj_description = "";
+    $hint = "";
+    // phpinfo();
     // if click on submit
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $isFileCorrect = false;
         $isFileSet = false;
-        include "verifySession.inc.php";
+        require_once "/includes/verifySession.inc.php";
         // check if file is set
         if(!empty($_FILES["file"]["name"])){
             $isFileSet = true;
@@ -39,12 +39,15 @@ $hint = "";
                 echo "Le taille du fichier est trop grand ou le format  n'est pas correct";
             }
         }
+        
+        //sql part
         if(!$isFileSet || ($isFileSet && $isFileCorrect)){
-            // sql part
-            // object_obj part
             include "/includes/connect_database.inc.php";
             global $conn;
+            
+            // build object_obj request depending on having photo or not, common part for two different upload
             $sql="INSERT INTO object_obj (obj_name, obj_description, obj_adddate";
+            
             if($isFileSet){
                 $sql .= ", obj_photofilename) VALUES ('".$_POST['obj_name']."', '".$_POST['obj_description']."', now(), '$newfilename');";
                 // echo $sql . "<br>";
@@ -52,15 +55,34 @@ $hint = "";
                 $sql .= ") VALUES ('".$_POST['obj_name']."', '".$_POST['obj_description']."', now());";
                 // echo $sql . "<br>";
             }
+    
             if ($conn->query($sql) === TRUE) {
                 // What a wonderful feature??!
                 $last_id = $conn->insert_id;
+    	   
+                if($_SESSION["uploadList"] == "ojf"){
+                    
+                    // objectfound_ojf
+                    $sql = "INSERT INTO objectfound_ojf (ojf_obj_id, ojf_adder) VALUES ($last_id, '". $_SESSION["usr_id"] ."');";
+                } else if($_SESSION["uploadList"] == "ojd"){
+                    
+                    // objectdeclared_ojd
+                    $sql = "INSERT INTO objectdeclared_ojd (ojd_obj_id, ojd_declarer) VALUES ($last_id, '". $_SESSION["usr_id"] ."');";
+                } else {
+                    
+                    // $_SESSION["uploadList"] error
+                }
                 
-                // objectfound_ojf part
-                $sql = "INSERT INTO objectfound_ojf (ojf_obj_id, ojf_adder) VALUES ($last_id, '". $_SESSION["usr_id"] ."');";
                 if ($conn->query($sql) === TRUE) {
                     $hint =  "Les données de l'objet est enregistrer.";
-                    header("refresh:2;url=index_admin.php");
+                    switch($_SESSION["uploadList"]){
+                        case "ojf":
+                            header("refresh:2;url=index_admin.php");
+                            break;
+                        case "ojd":
+                            header("refresh:2;url=index_student.php");
+                            break;
+                    }
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }

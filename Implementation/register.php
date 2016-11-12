@@ -8,6 +8,7 @@
     <meta name="description" content="Page d'Inscription d'Esigelec" />
     <meta name="robots" content="none">
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/header_footer.css" />
 </head>
 
 <body>

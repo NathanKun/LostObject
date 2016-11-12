@@ -11,7 +11,7 @@
     line-height: 0;
 }
 
-#addObjLink {
+#declareLink {
     display: inline-block;
     margin-top: 0.321em;
 }
@@ -20,6 +20,12 @@
     display: inline-block;
     vertical-align: baseline;
 }
+
+
+/*#buttons {
+    display: flex;
+    justify-content: space-between;
+}*/
 
 .photo {
     max-height: 10em;
@@ -30,32 +36,10 @@
     margin: 0 auto;
 }
 
-.id {
-    display: none;
-}
-
-.abandon {
-    /*
-    text-align: center;
-    width: 80px;
-    max-width: 100px;
-    margin: 0 auto;
-	*/
-    display: none;
-}
-
+.id,
+.abandon,
 .returned {
-    text-align: center;
-    width: 80px;
-    max-width: 100px;
-    margin: 0 auto;
-}
-
-.found {
-    text-align: center;
-    width: 80px;
-    max-width: 100px;
-    margin: 0 auto;
+    display: none;
 }
 
 .date {

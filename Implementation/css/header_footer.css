@@ -1,16 +1,21 @@
-header>img {
-    display: inline-block;
+header {
+    display: block;
     vertical-align: middle;
-    margin: 20px;
+    text-align: center;
+    margin: 5px auto;
     padding: 10px;
+    font: bold 20px arial;
 }
 
-header>h1 {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 20px;
-    padding: 10px;
-    font: bold 40px arial;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+    text-align: center;
+    margin: 5px auto;
 }
 
 footer {
@@ -30,6 +35,7 @@ h1 {
     font-family: Verdana;
     font-weight: normal;
     color: #024457;
+    margin: 5px auto;
 }
 
 h1 span {

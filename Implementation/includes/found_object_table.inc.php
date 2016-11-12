@@ -2,7 +2,7 @@
 	require "connect_database.inc.php";
     global $conn;
 
-    echo "<h3>La liste des objets trouvés</h3>";
+    echo "<h3>La liste des objets retrouvés</h3>";
 
     $sql = "SELECT * FROM objectFound_ojf INNER JOIN object_obj ON objectFound_ojf.ojf_obj_id = object_obj.obj_id";
     $result = $conn->query($sql);
