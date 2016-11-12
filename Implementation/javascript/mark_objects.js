@@ -42,5 +42,5 @@ function abandonObject(obj) {
     "use strict";
     var confirmMsg = 'Vous voulez abondonner cet objet ?',
         tableId = "table_found";
-    callPHP(obj, confirmMsg, tableId, 5, 3);
+    callPHP(obj, confirmMsg, tableId, 6, 3);
 }

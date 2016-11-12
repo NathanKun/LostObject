@@ -17,7 +17,7 @@
         <th>Déclareur(s)</th>
         <th class=\"date\">Date de la déclaration</th>
         <th class=\"found\">Trouvé</th>
-        <th class=\"id\">id</th>";
+        <th class=\"id\">id</th></tr>";
 
         // output data of each object wasn't marked as abandonned, found or returned.
         while($row = $result->fetch_assoc()) {

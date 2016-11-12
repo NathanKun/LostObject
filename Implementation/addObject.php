@@ -6,9 +6,9 @@
     <meta name="keywords" content="ajouter, perdu, trouvé, objets">
     <meta name="description" content="Ajouter un objet trouvé">
     <meta name="robots" content="none">
-    <meta http-equiv="cache-control" content="no-cache">
     <title>Ajouter un objet trouvé</title>
     <link rel="stylesheet" href="/css/upload.css" />
+    <link rel="stylesheet" href="./css/header_footer.css">
 </head>
 
 <body>

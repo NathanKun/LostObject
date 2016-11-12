@@ -1,7 +1,7 @@
 <?php
+    require_once "/includes/param.inc.php";
+    global $lifeTimeInMin;
     session_start();
-
-    $lifeTimeInMin = 15;
 
     if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true){
         // logged in

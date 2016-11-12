@@ -7,8 +7,7 @@
     <meta name="keywords" content="register, créer, compte" />
     <meta name="description" content="Page d'Inscription d'Esigelec" />
     <meta name="robots" content="none">
-    <meta http-equiv="cache-control" content="no-cache">
-    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="/css/index.css" />
 </head>
 
 <body>
@@ -35,7 +34,7 @@
                 <input type="password" id="pw2" name="pw2" type="password" value="<?php echo $pw2;?>" required />
             </div>
             <div class="button">
-                <input type="submit" value="S'incrire" />
+                <input type="submit" value="S'inscrire" />
             </div>
         </form>
     </section>

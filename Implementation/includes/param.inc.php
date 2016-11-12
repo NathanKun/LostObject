@@ -1,5 +1,6 @@
 <?php
 
+$lifeTimeInMin = 15;
 
 $host="localhost";
 $user="root";

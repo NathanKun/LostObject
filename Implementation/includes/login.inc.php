@@ -1,5 +1,40 @@
-<?php include('/includes/check_input.php');
+<?php 
+    include('/includes/check_input.php');
+    require_once "/includes/param.inc.php";
+
+    global $lifeTimeInMin;
     $id=$pw=$hint="";
+
+    session_start();
+    if(isset($_SESSION["loggedIn"])){
+        if(isset($_SESSION["lastActivity"]) && (time() - $_SESSION["lastActivity"] < 60 * $lifeTimeInMin)){
+            $hint="En cour de redirection...";
+            switch($_SESSION["usr_level"]){
+                case 1:
+				    header('refresh:1; url=index_student.php');
+                    break;
+                    
+                case 2:
+                    header("refresh:1;url=index_admin.php");
+                    break;
+                    
+                case 3:
+                    header("refresh:1;url=index_dev.php");
+                    break;
+                    
+                case 99:
+                    header("refresh:1;url=print_database.php");
+                    session_destroy();
+                    break;
+                              
+                default:
+                    $hint="User level incorrect, it can not be " . $row["usr_level"] . " .";
+                    session_destroy();
+                    break;
+            }
+        }
+    }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $id = $_POST['id'];
         $pw = $_POST['pw'];
@@ -36,10 +71,10 @@
                     $hint="Bienvenu " . $row["usr_name"] . ".";
                 
                     // session start, set user info.
-                    session_start();
                     $_SESSION["loggedIn"] = true;
                     $_SESSION["usr_id"] = $row["usr_id"];
                     $_SESSION["usr_name"] = $row["usr_name"];
+                    $_SESSION["usr_level"] = $row["usr_level"];
                     $_SESSION["lastActivity"] = time();
                     switch($row["usr_level"]){
                         case 1:

@@ -17,7 +17,7 @@
         <th class=\"date\">Date de l'ajout</th>
         <th class=\"returned\">Retourner</th>
         <th class=\"abandon\">Abandonner</th>
-        <th class=\"id\">id</th>";
+        <th class=\"id\">id</th></tr>";
 
         // output data of each object wasn't marked as abandonned, found or returned.
         while($row = $result->fetch_assoc()) {
@@ -38,7 +38,7 @@
                 <td class=\"returned\">
                 <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td>
                 <td class=\"abandon\">
-                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/delete.png\" alt=\"delete\"></td>
+                <img class=\"deleteImg\" onclick=\"abandonObject(this);\" src=\"../src/delete.png\" alt=\"delete\"></td>
                 <td class=\"id\">" . $row["obj_id"] . "</td></tr>";
 			}
         }

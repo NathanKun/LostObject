@@ -1,0 +1,49 @@
+.btnImg {
+    display: inline-block;
+    margin: 1em;
+}
+
+.link {
+    display: inline-block;
+    margin: 1em;
+}
+
+.photo {
+    max-height: 10em;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.id {
+    display: none;
+}
+
+.abandon {
+    text-align: center;
+    width: 80px;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.returned {
+    /*text-align: center;
+    width: 80px;
+    max-width: 100px;
+    margin: 0 auto;*/
+    display: none;
+}
+
+.found {
+    text-align: center;
+    width: 80px;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.date {
+    text-align: center;
+    width: 8em;
+}

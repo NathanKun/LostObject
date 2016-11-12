@@ -7,12 +7,9 @@
     <meta name="keywords" content="déconnecter,retourner, déconnexion">
     <meta name="description" content="Retourner à la page d'acceuil.">
     <meta name="robots" content="none">
-    <meta http-equiv="cache-control" content="no-cache">
-    <title>Objets perdus - Page d'acceuil - Administrateur</title>
-    <link rel="stylesheet" href="./css/table.css">
-    <link rel="stylesheet" href="./css/index_admin.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/javascript/mark_objects.js"></script>
+    <title>Objets perdus - Déconnexion</title>
+    <link rel="stylesheet" href="/css/header_footer.css">
+    <link rel="stylesheet" href="/css/disconnect.css">
 </head>
 
 <body>

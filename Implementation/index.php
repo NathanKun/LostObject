@@ -6,9 +6,8 @@
     <meta name="keywords" content="index, objets，perdus, ESIGELEC, login">
     <meta name="description" content="Index du système Objets Perdus">
     <meta name="robots" content="index">
-    <meta http-equiv="cache-control" content="no-cache">
     <title>Objets perdus - Index</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -36,7 +35,6 @@
         </form>
     </section>
     <?php include('/includes/footer.inc.php') ?>
-
 </body>
 
 </html>
