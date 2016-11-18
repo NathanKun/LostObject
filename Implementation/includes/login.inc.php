@@ -1,6 +1,6 @@
 <?php 
-    include('/includes/check_input.php');
-    require_once "/includes/param.inc.php";
+    require_once "./includes/check_input.php";
+    require_once "./includes/param.inc.php";
 
     global $lifeTimeInMin;
     $id=$pw=$hint="";
@@ -11,19 +11,19 @@
             $hint="En cour de redirection...";
             switch($_SESSION["usr_level"]){
                 case 1:
-				    header('refresh:1; url=index_student.php');
+				    header('refresh:1; url=./index_student.php');
                     break;
                     
                 case 2:
-                    header("refresh:1;url=index_admin.php");
+                    header("refresh:1;url=./index_admin.php");
                     break;
                     
                 case 3:
-                    header("refresh:1;url=index_dev.php");
+                    header("refresh:1;url=./index_dev.php");
                     break;
                     
                 case 99:
-                    header("refresh:1;url=print_database.php");
+                    header("refresh:1;url=./print_database.php");
                     session_destroy();
                     break;
                               
@@ -78,19 +78,19 @@
                     $_SESSION["lastActivity"] = time();
                     switch($row["usr_level"]){
                         case 1:
-							header('refresh:1; url=index_student.php');
+							header('refresh:1; url=./index_student.php');
                             break;
 							
                         case 2:
-							header("refresh:1;url=index_admin.php");
+							header("refresh:1;url=./index_admin.php");
                             break;
 								
                         case 3:
-							header("refresh:1;url=index_dev.php");
+							header("refresh:1;url=./index_dev.php");
                             break;
 							
                         case 99:
-                            header("refresh:1;url=print_database.php");
+                            header("refresh:1;url=./print_database.php");
                             session_destroy();
                             break;
                            

@@ -1,6 +1,15 @@
 <?php
+/*
+require "./path.php";
+if (defined(ROOTPATH)){
+	require_once ROOTHPATH . "/includes/param.inc.php";
+} else if(defined (INCLUDESPATH)){
+	require_once INCLUDESPATH . "/param.inc.php";
+}*/
 
-require_once("param.inc.php");
+@include "./includes/param.inc.php";
+@include "./param.inc.php";
+
 global $host;
 global $user;
 global $dbpw;

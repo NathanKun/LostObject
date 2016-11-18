@@ -1,5 +1,5 @@
 <?php
-	require "connect_database.inc.php";
+	require "./includes/connect_database.inc.php";
     global $conn;
 
     echo "<h3>La liste des objets retrouvés</h3>";
@@ -27,18 +27,18 @@
                 "</td>";
                 // show photo if exist
                 if(!is_null($row["obj_photofilename"])){
-                    echo "<td><a href=\"../src/photo/" . $row["obj_photofilename"] . "\">
-                    <img class=\"photo\" src=\"../src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
+                    echo "<td><a href=\"./src/photo/" . $row["obj_photofilename"] . "\">
+                    <img class=\"photo\" src=\"./src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
                     "</a></td>";
                 } else {
-                    echo "<td><img class=\"photo\" src=\"../src/photo/nophoto.png\" alt=\"nophoto.png\" ></td>";
+                    echo "<td><img class=\"photo\" src=\"./src/photo/nophoto.png\" alt=\"nophoto.png\" ></td>";
                 }
                 echo "<td>" . $row["obj_description"].  "</td>
                 <td class=\"date\">" . $row["obj_adddate"]. "</td>
                 <td class=\"returned\">
-                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"../src/returned.png\" alt=\"returned\"></td>
+                <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"./src/returned.png\" alt=\"returned\"></td>
                 <td class=\"abandon\">
-                <img class=\"deleteImg\" onclick=\"abandonObject(this);\" src=\"../src/delete.png\" alt=\"delete\"></td>
+                <img class=\"deleteImg\" onclick=\"abandonObject(this);\" src=\"./src/delete.png\" alt=\"delete\"></td>
                 <td class=\"id\">" . $row["obj_id"] . "</td></tr>";
 			}
         }

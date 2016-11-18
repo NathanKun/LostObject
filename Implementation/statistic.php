@@ -7,9 +7,9 @@
     <meta name="description" content="Statistique">
     <meta name="robots" content="index">
     <title>Système Objets perdus - Statistique</title>
-    <link rel="stylesheet" href="/css/header_footer.css">
-    <link rel="stylesheet" href="/css/table.css">
-    <link rel="stylesheet" href="/css/statistic.css">
+    <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/statistic.css">
 </head>
 
 <body>
@@ -134,7 +134,7 @@
         </tr></table>";
     ?>
 
-    <?php include('/includes/footer.inc.php') ?>
+    <?php include('./includes/footer.inc.php') ?>
 
 </body>
 

@@ -1,5 +1,5 @@
 <?php
-    include "/path.php";
+    include "./path.php";
     $obj_name = "";
     $obj_description = "";
     $hint = "";
@@ -42,7 +42,7 @@
         
         //sql part
         if(!$isFileSet || ($isFileSet && $isFileCorrect)){
-            include "/includes/connect_database.inc.php";
+            include "./includes/connect_database.inc.php";
             global $conn;
             
             // build object_obj request depending on having photo or not, common part for two different upload

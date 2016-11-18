@@ -2,15 +2,13 @@
 
 $lifeTimeInMin = 15;
 
-$host="127.0.0.1";
+/*$host="127.0.0.1";
 $user="root";
 $dbpw="";
-$db="LostObjects";
+$db="LostObjects";*/
 
-/*
 $host="MODULEWEB.intranet.int";
 $user="gr1003JRYb";
 $dbpw="dYofADnV";
-$db="bddgr1003";*/
-
+$db="bddgr1003";
 ?>

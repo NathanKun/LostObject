@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/index_dev.css">
     <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/disconnect.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/javascript/mark_objects.js"></script>
+    <script src="./javascript/mark_objects.js"></script>
 </head>
 
 <body>
@@ -20,10 +21,10 @@
 
     <div id="buttons">
         <a id="statLink" href="statistic.php">
-            <img src="/src/statistic.png" alt="Statistique" />
+            <img src="./src/statistic.png" alt="Statistique" />
         </a>
         <a id="disconnectLink" href="disconnect.php">
-            <img src="/src/disconnect.png" alt="Déconnecter" />
+            <img src="./src/disconnect.png" alt="Déconnecter" />
         </a>
     </div>
     <div>

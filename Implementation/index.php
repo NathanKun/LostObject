@@ -7,8 +7,8 @@
     <meta name="description" content="Index du système Objets Perdus">
     <meta name="robots" content="index">
     <title>Système Objets perdus - Index</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/header_footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header_footer.css">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             </div>
         </form>
     </section>
-    <?php include('/includes/footer.inc.php') ?>
+    <?php include('./includes/footer.inc.php') ?>
 </body>
 
 </html>

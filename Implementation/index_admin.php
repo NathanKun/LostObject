@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/index_admin.css">
     <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/disconnect.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/javascript/mark_objects.js"></script>
+    <script src="./javascript/mark_objects.js"></script>
 </head>
 
 <body>
@@ -22,10 +23,10 @@
 
     <div id="buttons">
         <a id="addObjLink" href="uploadObject.php">
-            <img src="/src/addObjFound.png" alt="Ajouter un objet trouvé" />
+            <img src="./src/addObjFound.png" alt="Ajouter un objet trouvé" />
         </a>
         <a id="disconnectLink" href="disconnect.php">
-            <img src="/src/disconnect.png" alt="Déconnecter" />
+            <img src="./src/disconnect.png" alt="Déconnecter" />
         </a>
     </div>
     <div>

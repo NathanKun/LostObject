@@ -7,12 +7,12 @@
     <meta name="keywords" content="register, créer, compte" />
     <meta name="description" content="Page d'Inscription d'Esigelec" />
     <meta name="robots" content="none">
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/header_footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header_footer.css" />
 </head>
 
 <body>
-    <?php include "/includes/header.inc.php"; ?>
+    <?php include "./includes/header.inc.php"; ?>
 
     <h2>Page d'Inscription</h2>
 

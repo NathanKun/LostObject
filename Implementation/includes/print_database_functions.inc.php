@@ -1,6 +1,6 @@
 <?php
 
-require_once "connect_database.inc.php";
+require_once "./includes/connect_database.inc.php";
 
 function print_user_usr(){
     global $conn;

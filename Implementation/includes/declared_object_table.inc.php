@@ -1,5 +1,5 @@
 <?php
-	require "connect_database.inc.php";
+	require "./includes/connect_database.inc.php";
     global $conn;
 
     echo "<h3>La liste des objets déclarés</h3>";
@@ -27,17 +27,17 @@
                 // show photo if exist
                 if(!is_null($row["obj_photofilename"])){
                     echo "<td>
-                    <a href=\"../src/photo/" . $row["obj_photofilename"] . "\">
-                    <img class=\"photo\" src=\"../src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
+                    <a href=\"./src/photo/" . $row["obj_photofilename"] . "\">
+                    <img class=\"photo\" src=\"./src/photo/" . $row["obj_photofilename"] . "\" alt=\"" . $row["obj_photofilename"] . "\" >" .
                     "</a></td>";
                 } else {
-                    echo "<td><img class=\"photo\" src=\"../src/photo/nophoto.png\" alt=\"nophoto.png\" ></td>";
+                    echo "<td><img class=\"photo\" src=\"./src/photo/nophoto.png\" alt=\"nophoto.png\" ></td>";
                 }
                 echo "<td>" . $row["obj_description"].  "</td>
                 <td>" . $row["ojd_declarer"]. "</td>
                 <td class=\"date\">" . $row["obj_adddate"]. "</td>
                 <td class=\"found\">
-                <img class=\"foundImg\" onclick=\"foundObject(this);\" src=\"../src/found.png\" alt=\"found\"></td>
+                <img class=\"foundImg\" onclick=\"foundObject(this);\" src=\"./src/found.png\" alt=\"found\"></td>
                 <td class=\"id\">" . $row["obj_id"] . "</td></tr>";
 			}
         }

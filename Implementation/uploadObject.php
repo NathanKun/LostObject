@@ -7,16 +7,16 @@
     <meta name="description" content="Ajouter un objet trouvé">
     <meta name="robots" content="none">
     <title>Ajouter un objet trouvé</title>
-    <link rel="stylesheet" href="/css/upload.css" />
+    <link rel="stylesheet" href="./css/upload.css" />
     <link rel="stylesheet" href="./css/header_footer.css">
 </head>
 
 <body>
-    <?php include "/includes/header.inc.php";
-          require_once "/includes/verifySession.inc.php";?>
+    <?php include "./includes/header.inc.php";
+          require_once "./includes/verifySession.inc.php";?>
 
     <h2>
-        <?php include "/includes/upload.inc.php"?>
+        <?php include "./includes/upload.inc.php"?>
         <?php echo $_SESSION["title"] ?>
     </h2>
     <section>

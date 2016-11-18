@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/table.css">
     <link rel="stylesheet" href="./css/index_student.css">
     <link rel="stylesheet" href="./css/header_footer.css">
+    <link rel="stylesheet" href="./css/disconnect.css">
 </head>
 
 <body>
@@ -18,10 +19,10 @@
     <?php $_SESSION["title"] = "Déclarer un objet Perdu"; $_SESSION["uploadList"] = "ojd"; ?>
     <div id="buttons">
         <a id="declareLink" href="uploadObject.php">
-            <img src="/src/declareObjLost.png" alt="Déclarer un objet perdu" />
+            <img src="./src/declareObjLost.png" alt="Déclarer un objet perdu" />
         </a>
         <a id="disconnectLink" href="disconnect.php">
-            <img src="/src/disconnect.png" alt="Déconnecter" />
+            <img src="./src/disconnect.png" alt="Déconnecter" />
         </a>
     </div>
     <div>
