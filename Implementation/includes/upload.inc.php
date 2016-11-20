@@ -46,20 +46,24 @@
             global $conn;
             
             // build object_obj request depending on having photo or not, common part for two different upload
+			
             $sql="INSERT INTO object_obj (obj_name, obj_description, obj_adddate";
-            
+			
+            $obj_name = $conn->real_escape_string($_POST['obj_name']);
+            $obj_description = $conn->real_escape_string($_POST['obj_description']);
+			
             if($isFileSet){
-                $sql .= ", obj_photofilename) VALUES ('".$_POST['obj_name']."', '".$_POST['obj_description']."', now(), '$newfilename');";
+                $sql .= ", obj_photofilename) VALUES ('".$obj_name."', '".$obj_description."', now(), '$newfilename');";
                 // echo $sql . "<br>";
             } else {
-                $sql .= ") VALUES ('".$_POST['obj_name']."', '".$_POST['obj_description']."', now());";
+                $sql .= ") VALUES ('".$obj_name."', '".$obj_description."', now());";
                 // echo $sql . "<br>";
             }
     
             if ($conn->query($sql) === TRUE) {
                 // What a wonderful feature??!
                 $last_id = $conn->insert_id;
-    	   
+				
                 if($_SESSION["uploadList"] == "ojf"){
                     
                     // objectfound_ojf
@@ -74,7 +78,7 @@
                 }
                 
                 if ($conn->query($sql) === TRUE) {
-                    $hint =  "Les données de l'objet est enregistrer.";
+                    $hint =  "Les données de l'objet sont enregistrés.";
                     switch($_SESSION["uploadList"]){
                         case "ojf":
                             header("refresh:2;url=index_admin.php");

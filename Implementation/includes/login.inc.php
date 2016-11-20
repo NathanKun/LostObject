@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
     require_once "./includes/check_input.php";
     require_once "./includes/param.inc.php";
 
@@ -104,9 +104,7 @@
                      $hint="Le mots de passe est incorrect!";
                 }
             }
-        
         }
-        
     }
 }
 ?>

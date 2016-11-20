@@ -27,7 +27,7 @@
             <label for="obj_name">Nom de l'objet :</label>
             <input type="text" id="obj_name" name="obj_name" value="<?php echo $obj_name;?>" required />
             <label for="obj_description">Description :</label>
-            <textarea id="obj_description" name="obj_description" value="<?php echo $obj_description;?>" required></textarea>
+            <textarea id="obj_description" name="obj_description" required></textarea>
             <label for="file">Ajouter un photo de l'objet :</label>
             <input type="file" id="file" name="file" />
             <input type="submit" value="Enregistrer" />

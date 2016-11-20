@@ -23,7 +23,7 @@
         while($row = $result->fetch_assoc()) {
 			if ($row['obj_stat'] == 1){
 				echo "<tr>
-                <td>" . $row["obj_name"]. 
+                <td>" . htmlentities($row["obj_name"]). 
                 "</td>";
                 // show photo if exist
                 if(!is_null($row["obj_photofilename"])){
@@ -33,8 +33,8 @@
                 } else {
                     echo "<td><img class=\"photo\" src=\"./src/photo/nophoto.png\" alt=\"nophoto.png\" ></td>";
                 }
-                echo "<td>" . $row["obj_description"].  "</td>
-                <td class=\"date\">" . $row["obj_adddate"]. "</td>
+                echo "<td>" . htmlentities($row["obj_description"]) . "</td>
+                <td class=\"date\">" . htmlentities($row["obj_adddate"]) . "</td>
                 <td class=\"returned\">
                 <img class=\"returnedImg\" onclick=\"returnedObject(this);\" src=\"./src/returned.png\" alt=\"returned\"></td>
                 <td class=\"abandon\">

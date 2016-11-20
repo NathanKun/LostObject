@@ -96,7 +96,7 @@
         <td>nombre de compte ensemble</td>
         <td>$nb_account</td>
         </tr><tr>
-        <td>nombre de compte d'éudiant</td>
+        <td>nombre de compte d'édudiant</td>
         <td>$nb_account_student</td>
         </tr><tr>
         <td>nombre de compte d'administrateur</td>

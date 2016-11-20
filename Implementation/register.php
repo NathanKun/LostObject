@@ -32,7 +32,7 @@
                 <input type="text" id="id" name="id" value="<?php echo $id;?>" required />
                 <input type="text" id="username" name="name" value="<?php echo $name;?>" required />
                 <input type="password" id="pw" name="pw" value="<?php echo $pw;?>" required />
-                <input type="password" id="pw2" name="pw2" type="password" value="<?php echo $pw2;?>" required />
+                <input type="password" id="pw2" name="pw2" value="<?php echo $pw2;?>" required />
             </div>
             <div class="button">
                 <input type="submit" value="S'inscrire" />

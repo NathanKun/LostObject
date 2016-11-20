@@ -14,7 +14,7 @@
 <body>
     <?php include('./includes/header.inc.php');?>
     <?php include('./includes/login.inc.php');?>
-    <section>
+	<section>
         <form name="login_input" method="post" action="<?php echo htmlspecialchars($_SERVER[ 'PHP_SELF' ]);?>">
             <h4 id="hint">
                 <?php echo $hint; ?>
@@ -35,7 +35,7 @@
             </div>
         </form>
     </section>
-    <?php include('./includes/footer.inc.php') ?>
+    <?php include('./includes/footer.inc.php'); ?>
 </body>
 
 </html>
