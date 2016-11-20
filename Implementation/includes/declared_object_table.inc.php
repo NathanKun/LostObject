@@ -14,7 +14,7 @@
         <th>Nom</th>
         <th>Photo</th>
         <th>Description</th>
-        <th>Déclareur(s)</th>
+        <th>Déclareur(e)</th>
         <th class=\"date\">Date de la déclaration</th>
         <th class=\"found\">Trouvé</th>
         <th class=\"id\">id</th></tr>";
