@@ -68,7 +68,7 @@
 				$row = $result->fetch_assoc();
                 if(password_verify($pw, $row["usr_pw"])){
                     // login successful
-                    $hint="Bienvenu " . $row["usr_name"] . ".";
+                    $hint="Bienvenu " . htmlentities($row["usr_name"]) . ".";
                 
                     // session start, set user info.
                     $_SESSION["loggedIn"] = true;

@@ -1,8 +1,4 @@
-DROP DATABASE IF EXISTS LostObjects;
-CREATE DATABASE IF NOT EXISTS LostObjects;
-USE LostObjects;
-
-#USE bddgr1003;
+USE bddgr1003;
 
 DROP TABLE IF EXISTS
   objectDeclared_ojd;
